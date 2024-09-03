@@ -1,7 +1,7 @@
 {
   "type": "prestashop-module",
   "name": "noda-payments/presta-noda-payments",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Noda Payment Gateway integration for PrestaShop",
   "homepage": "https://noda.live/",
   "authors": [
@@ -11,8 +11,7 @@
     }
   ],
   "require": {
-    "php": ">=7.2.5",
-    "prestashop/core": "^1.7 || ^8.0"
+    "php": ">=7.2.5"
   },
   "license": "proprietary",
   "minimum-stability": "stable",
