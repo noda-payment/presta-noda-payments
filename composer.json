@@ -1,7 +1,7 @@
 {
   "type": "prestashop-module",
-  "name": "noda-payments/presta-noda-payments",
-  "version": "1.0.1",
+  "name": "noda-payments/nodapay",
+  "version": "1.1.0",
   "description": "Noda Payment Gateway integration for PrestaShop",
   "homepage": "https://noda.live/",
   "authors": [
