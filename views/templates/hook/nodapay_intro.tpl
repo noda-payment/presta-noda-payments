@@ -2,23 +2,29 @@
     document.addEventListener('DOMContentLoaded', function() {
         var nodapayOptions = document.querySelectorAll('input[name="payment-option"][data-module-name="nodapay"]');
         var elseOptions = document.querySelectorAll('input[name="payment-option"]:not([data-module-name="nodapay"])');
+        const placeButton = document.querySelector('#checkout-payment-step #payment-confirmation button');
 
         nodapayOptions.forEach(function(nodapayOption) {
             nodapayOption.addEventListener('change', function() {
-                const placeButton = document.querySelector('#checkout-payment-step #payment-confirmation button');
                 if (this.checked) {
                     placeButton.classList.add('nodapay-button');
                     placeButton.style.backgroundImage = 'url({$nodaLogo})';
-                    console.log('NodaPay выбран');
+                    console.log('NodaPay choice');
                 }
             });
+
+            if (nodapayOption.checked) {
+              placeButton.classList.add('nodapay-button');
+              placeButton.style.backgroundImage = 'url({$nodaLogo})';
+              console.log('NodaPay choice');
+            }
         });
 
         elseOptions.forEach(function(option) {
             option.addEventListener('change', function() {
                 const placeButton = document.querySelector('#checkout-payment-step #payment-confirmation button');
                 if (this.checked) {
-                    console.log('NodaPay не выбран');
+                    console.log('NodaPay does not choice');
                     placeButton.style.backgroundImage = '';
                     placeButton.classList.remove('nodapay-button');
                 }
